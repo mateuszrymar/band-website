@@ -16,6 +16,8 @@
     margin: 0 auto;
     max-width: 940px;
     padding: 0 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 header  {
@@ -64,13 +66,18 @@ a {
 
 .image-section__image-container {
     overflow: hidden;
-    width: 33.3%;
+    flex-grow: 1;
+    /* width: 33.3%;     */
 }
 
 .image-section__image {
     align-items: center;
     background: no-repeat 50% / cover;
     display: flex;
+    flex-basis: auto;
+    /* width: 400px; */
+    flex-shrink: 1;
+    flex-grow: 1;
     height: 400px;
     justify-content: center;
     padding: 0 20px;
@@ -155,6 +162,7 @@ button {
 
 .button-main {
     background-color: var(--light);
+    transition: background-color .5s ease-in-out;
 }
 
 footer {
@@ -182,4 +190,26 @@ footer {
 .button-double:hover::after {
     transform: scaleY(1);
     box-shadow: 0 0 8px 5px var(--dark);
+}
+
+.button-main:hover {
+    animation: borderGrow 1s linear infinite alternate;
+    background-color: var(--primary-color);
+}
+
+@keyframes borderGrow {
+
+    0% {
+        border: solid 2px black;
+        box-shadow: 0 0 0 0 black;
+    }
+
+    100% {
+        border: solid 2px black;
+        box-shadow: 0 0 8px 2px black;      
+    }
+}
+
+@media (max-width: 600px) {
+
 }
