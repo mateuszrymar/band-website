@@ -3,9 +3,10 @@
     font-family: 'Neuton', serif;
     margin: 0;
     padding: 0;
-    --primary-color: rgb(43, 15, 10);
-    --dark: rgb(24, 24, 24);
-    --light: rgb(146, 146, 146);
+    --primary-color: #A18C71;
+    --dark: #333333;
+    --light: #666666;
+    --text-white: #ffffff;
 }
 
 .wrap {
@@ -17,9 +18,11 @@
     padding: 0 20px;
 }
 
-header {
-    background-color: var(--primary-color);
-    padding: 20px 0;    
+header  {
+    background-color: var(--dark);
+    color: var(--primary-color);
+    padding: 20px 0;  
+    border-bottom: 1px solid var(--light);  
 }
 
 ul {
@@ -36,8 +39,8 @@ a {
     text-decoration: none;
 }
 
-.nav__anchor {
-    color: var(--dark);
+.nav-anchor {
+    color: var(--primary-color);
     font-size: 20px;
     position: relative;
 }
@@ -68,7 +71,13 @@ a {
     text-align: center;
 }
 
+.text-group {
+
+    background-color: var(--light);
+}
+
 .text-group__container {
+    color: var(--text-white);
     padding: 50px;
 }
 
@@ -83,10 +92,13 @@ button {
     font-size: 18px;
     padding:  5px 20px;
     position: relative;
+    color: var(--text-white);
 }
 
 .text-section {
-    background-color: #eee;
+    background-color: var(--light);
+    color: var(--text-white);
+    border-top: 1px solid var(--primary-color);
     padding: 50px 0;
 }
 
